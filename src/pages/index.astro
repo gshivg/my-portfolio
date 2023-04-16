@@ -1,0 +1,68 @@
+---
+import DefaultLayout from '../layouts/DefaultLayout.astro'
+import Hero from '../components/Hero.astro'
+import Feature from '../components/Feature.astro'
+import Counter from '../components/Counter.astro'
+import ContentMedia from '../components/ContentMedia.astro'
+---
+
+<DefaultLayout title="Home">
+  <Hero />
+  <section class="my-64">
+    <div class="container">
+      <h2 class="mb-16 text-6xl">Know Me</h2>
+      <p class="text-2xl">Hi, I'm Shivansh Gupta, a 20 year old college student, born and brought up in Prayagraj, U.P. India. I'm currently pursuing B.Tech in Electronics & Communication Engineering, with a knack for software development. I love to always keep learning new technologies and always keep trying new things.</p>
+    </div>
+  </section>
+  <section class="my-64">
+    <div class="container">
+      <h2 class="mb-16 text-6xl">My Technology Stack</h2>
+      <div class="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
+        <Feature icon="flutter" title="Flutter" stars='4' >
+          Flutter is Google’s UI toolkit for building beautiful, natively compiled applications for mobile, web, and desktop from a single codebase.
+        </Feature>
+        <Feature icon="laravel" title="Laravel" stars='3'>
+          Laravel is a web application framework with expressive, elegant syntax. With already laid down foundation — freeing you to create without sweating the small things.
+        </Feature>
+        <Feature icon="node" title="NodeJS" stars='3'>
+          Node.js is an open-source, cross-platform, back-end JavaScript runtime environment that runs on the V8 engine and executes JavaScript code outside a web browser.
+        </Feature>
+        <Feature icon="mysql" title="MySQL" stars='3'>
+          MySQL is an open-source relational database management system (RDBMS). Its name is a combination of "My", the name of co-founder Michael Widenius's daughter, and "SQL".
+        </Feature>
+        <Feature icon="figma" title="Figma" stars='4'>
+          Figma is a vector graphics editor and prototyping tool which is primarily web-based, with additional offline features enabled by desktop applications for macOS and Windows.
+        </Feature>
+      </div>
+    </div>
+  </section>
+  
+  <ContentMedia imgSrc="/wcag-compliant.webp" reverseImg={true}>
+    <h2>Featured Project: Tech Quiz</h2>
+    <p class="text-2xl">
+      My Tech Quiz is a technical quiz app made with Flutter's UI toolkit. It is a fully fledged app that is production ready with features such as sign in, sign up, quiz, and a leaderboard, to name a few. Click here to check it out on <a href="https://github.com/gshivg/quiz_flutter" target="_blank">Github</a> to know more. 
+    </p>
+    <p><a href="/projects/" >Click here</a> to read about my other projects.</p>
+  </ContentMedia>
+
+  <ContentMedia imgSrc="/wcag-compliant.webp" reverseImg={false}>
+    <h2>Featured Writing: Fire & Water</h2>
+    <p class="text-2xl">
+      Some love stories are about being together. Some are about just seeing eachother happy. Some are sad some are happy. Love stories come in all shapes, sizes and point of views. Read how Water and Fire's love story is different from the rest. <a href="/my-writings/water-and-fire">Click Here</a>
+    </p>
+    <p><a href="/my-writings/" >Click here</a> to read more of my writings.</p>
+  </ContentMedia>
+
+  
+  <section class="mt-64 mb-32">
+    <div class="container">
+      <h2 class="mb-16 text-6xl">Counters</h2>
+      <div class="grid grid-cols-1 gap-12 sm:grid-cols-2 md:grid-cols-4">
+        <Counter count="130" title="Stars" sub="On GitHub" />
+        <Counter count="17" title="Accessible" sub="Components" />
+        <Counter count="500" title="Commits" sub="Merged" />
+        <Counter count="18+" title="Months" sub="Since launch" />
+      </div>
+    </div>
+  </section>
+</DefaultLayout>
