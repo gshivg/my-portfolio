@@ -1,0 +1,9 @@
+.scroll-animation-blur {
+  filter: blur(25px);
+  transition: all 0.25s;
+}
+
+.scroll-animation-unblur {
+  filter: blur(0);
+  transition: all 0.25s;
+}

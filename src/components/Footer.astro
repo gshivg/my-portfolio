@@ -3,13 +3,15 @@ import CallToAction from "./CallToAction.astro";
 
 const currentYear = new Date().getFullYear();
 ---
+<script src="../js/scrollanimateblur.js"/>
 
-<footer>
+<footer class="scroll-animation-blur">
   <CallToAction />
   <section class="py-8">
     <div class="container">
       <p>
-        Impletemted on <a href="https://astro.build/" target="_blank">Astro</a>. © Shivansh Gupta</a>.
+        Impletemted on <a href="https://astro.build/" target="_blank">Astro</a>.
+        © Shivansh Gupta.
       </p>
     </div>
   </section>
