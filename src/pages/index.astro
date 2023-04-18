@@ -1,9 +1,9 @@
 ---
-import DefaultLayout from '../layouts/DefaultLayout.astro'
-import Hero from '../components/Hero.astro'
-import Feature from '../components/Feature.astro'
-import Counter from '../components/Counter.astro'
-import ContentMedia from '../components/ContentMedia.astro'
+import DefaultLayout from "../layouts/DefaultLayout.astro";
+import Hero from "../components/Hero.astro";
+import Feature from "../components/Feature.astro";
+import Counter from "../components/Counter.astro";
+import ContentMedia from "../components/ContentMedia.astro";
 ---
 
 <DefaultLayout title="Home">
@@ -11,43 +11,64 @@ import ContentMedia from '../components/ContentMedia.astro'
   <section class="my-64">
     <div class="container">
       <h2 class="mb-16 text-6xl">Know Me</h2>
-      <p class="text-2xl">Hi, I'm Shivansh Gupta, a 20 year old college student, born and brought up in Prayagraj, U.P. India. I'm currently pursuing B.Tech in Electronics & Communication Engineering, with a knack for software development. I love to always keep learning new technologies and always keep trying new things.</p>
+      <p class="text-2xl">
+        Hi, I'm Shivansh Gupta, a 20 year old college student, born and brought
+        up in Prayagraj, U.P. India. I'm currently pursuing B.Tech in
+        Electronics & Communication Engineering, with a knack for software
+        development. I love to always keep learning new technologies and always
+        keep trying new things.
+      </p>
     </div>
   </section>
   <section class="my-64">
     <div class="container">
       <h2 class="mb-16 text-6xl">My Technology Stack</h2>
-      <div class="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
-        <Feature icon="flutter" title="Flutter" stars='4' >
-          Flutter is Google’s UI toolkit for building beautiful, natively compiled applications for mobile, web, and desktop from a single codebase.
+      <div class="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3 features-list">
+        <Feature icon="flutter" title="Flutter" stars="4">
+          Flutter is Google’s UI toolkit for building beautiful, natively
+          compiled applications for mobile, web, and desktop from a single
+          codebase.
         </Feature>
-        <Feature icon="laravel" title="Laravel" stars='4'>
-          Laravel is a web application framework with expressive, elegant syntax. With already laid down foundation — freeing you to create without sweating the small things.
+        <Feature icon="laravel" title="Laravel" stars="4">
+          Laravel is a web application framework with expressive, elegant
+          syntax. With already laid down foundation — freeing you to create
+          without sweating the small things.
         </Feature>
-        <Feature icon="node" title="NodeJS" stars='3'>
-          Node.js is an open-source, cross-platform, back-end JavaScript runtime environment that runs on the V8 engine and executes JavaScript code outside a web browser.
+        <Feature icon="node" title="NodeJS" stars="3">
+          Node.js is an open-source, cross-platform, back-end JavaScript runtime
+          environment that runs on the V8 engine and executes JavaScript code
+          outside a web browser.
         </Feature>
-        <Feature icon="typescript" title="TypeScript" stars='4'>
-          TypeScript is an open-source programming language
-          developed and maintained by Microsoft. It is a strict syntactical superset of JavaScript, and adds optional static
-          typing to the language.
+        <Feature icon="typescript" title="TypeScript" stars="4">
+          TypeScript is an open-source programming language developed and
+          maintained by Microsoft. It is a strict syntactical superset of
+          JavaScript, and adds optional static typing to the language.
         </Feature>
-        <Feature icon="mysql" title="MySQL" stars='3'>
-          MySQL is an open-source relational database management system (RDBMS). Its name is a combination of "My", the name of co-founder Michael Widenius's daughter, and "SQL".
+        <Feature icon="mysql" title="MySQL" stars="3">
+          MySQL is an open-source relational database management system (RDBMS).
+          Its name is a combination of "My", the name of co-founder Michael
+          Widenius's daughter, and "SQL".
         </Feature>
-        <Feature icon="figma" title="Figma" stars='5'>
-          Figma is a vector graphics editor and prototyping tool which is primarily web-based, with additional offline features enabled by desktop applications for macOS and Windows.
+        <Feature icon="figma" title="Figma" stars="5">
+          Figma is a vector graphics editor and prototyping tool which is
+          primarily web-based, with additional offline features enabled by
+          desktop applications for macOS and Windows.
         </Feature>
       </div>
     </div>
   </section>
-  
+
   <ContentMedia imgSrc="/wcag-compliant.webp" reverseImg={true}>
     <h2>Featured Project: Tech Quiz</h2>
     <p class="text-2xl">
-      My Tech Quiz is a technical quiz app made with Flutter's UI toolkit. It is a fully fledged app that is production ready with features such as sign in, sign up, quiz, and a leaderboard, to name a few. Click here to check it out on <a href="https://github.com/gshivg/quiz_flutter" target="_blank">Github</a> to know more. 
+      My Tech Quiz is a technical quiz app made with Flutter's UI toolkit. It is
+      a fully fledged app that is production ready with features such as sign
+      in, sign up, quiz, and a leaderboard, to name a few. Click here to check
+      it out on <a href="https://github.com/gshivg/quiz_flutter" target="_blank"
+        >Github</a
+      > to know more.
     </p>
-    <p><a href="/projects/" >Click here</a> to read about my other projects.</p>
+    <p><a href="/projects/">Click here</a> to read about my other projects.</p>
   </ContentMedia>
 
   <!-- <section class="mt-64 mb-32">
@@ -62,3 +83,11 @@ import ContentMedia from '../components/ContentMedia.astro'
     </div>
   </section> -->
 </DefaultLayout>
+
+<style lang="scss">
+    @for $i from 1 through 6 {
+      .features-list:nth-child(#{$i}) {
+        transition-delay: 1s * $i;
+      }
+    }
+</style>
