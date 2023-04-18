@@ -8,8 +8,8 @@ const { src = "/astronaut-hero-img.webp" } = Astro.props;
   <div class="container">
     <div class="grid grid-cols-1 items-center gap-24 lg:grid-cols-2">
       <div class="flex flex-col items-center gap-8 md:items-start">
-        <h1 class="text-center text-6xl md:text-left lg:text-8xl">
-          <slot><span class="text-gradient">GSHIVG</span> Deving My Life</slot>
+        <h1 class="text-6xl md:text-left lg:text-8xl">
+        <slot><span class="text-gradient">GSHIVG</span> Deving My Life</slot>
         </h1>
         <div class="flex flex-col gap-3 min-[500px]:flex-row">
           <a class="button has-icon" href="https://github.com/gshivg" target="_blank">
@@ -52,5 +52,8 @@ const { src = "/astronaut-hero-img.webp" } = Astro.props;
     background-clip: border-box;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+  }
+  :global(.darkmode .color-secondary) {
+    color: var(--secondary-400);
   }
 </style>
