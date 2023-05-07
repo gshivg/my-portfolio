@@ -1,0 +1,30 @@
+---
+import DefaultLayout from "../../layouts/DefaultLayout.astro";
+import ContentMedia from "../../components/ContentMedia.astro";
+import { getCollection } from "astro:content";
+
+const posts = (await getCollection("project")).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+);
+---
+
+<DefaultLayout title="My Projects">
+  <section class="my-96">
+    <div class="space-content container">
+      <h1 class="text-8xl">My Projects</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam sed voluptas quis fuga, quod libero illum debitis repudiandae atque dolorem assumenda asperiores neque at adipisci! Voluptatibus, aspernatur quibusdam labore nemo deserunt hic, aliquam a aliquid accusantium eligendi vero! Corrupti quod soluta, tempore pariatur deserunt porro repudiandae velit tenetur nam molestias.</p>
+    </div>
+  </section>
+  <section>
+    {
+      posts.map((post) => (
+        <ContentMedia imgSrc="/wcag-compliant.webp" reverseImg={true}>
+          <h1>
+            <a href={`/projects/${post.slug}/`}>{post.data.title}</a>
+          </h1>
+          <p class="text-2xl">{post.data.description}</p>
+        </ContentMedia>
+      ))
+    }
+  </section>
+</DefaultLayout>
