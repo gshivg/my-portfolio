@@ -1,8 +1,8 @@
 {
   "name": "gshivg-portfolio",
-  "description": "An Accessible Starter Theme for Astro including several accessiblity features and tools to help you build faster.",
+  "description": "",
   "version": "2.0.2",
-  "author": "Mark Teekman",
+  "author": "Shivansh Gupta",
   "homepage": "https://accessible-astro.dev",
   "scripts": {
     "dev": "astro dev",
