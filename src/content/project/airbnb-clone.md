@@ -7,4 +7,13 @@ description:
 heroImg: ""
 pubDate: "Apr 20 2023"
 status: "Under Progress"
+techStack:
+  [
+    ["React", "3"],
+    ["NextJS", "3"],
+    ["MongoDB", "2"],
+    ["TailwindCSS", "4"],
+    ["Typescript", "4"],
+    ["Sass", "4"],
+  ]
 ---
