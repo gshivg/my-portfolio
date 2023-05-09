@@ -5,13 +5,14 @@ import Feature from "../components/Feature.astro";
 import Counter from "../components/Counter.astro";
 import ContentMedia from "../components/ContentMedia.astro";
 ---
-<script src="../js/scrollanimate-reverse.js"/>
+
+<script src="../js/scrollanimate-reverse.js"></script>
 <DefaultLayout title="Home">
   <Hero />
   <section class="my-64">
     <div class="container">
       <h2 class="mb-16 text-6xl">Know Me</h2>
-      <p class="text-2xl slide-in-reverse">
+      <p class="slide-in-reverse text-2xl">
         Hi, I'm Shivansh Gupta, a 20 year old college student, born and brought
         up in Prayagraj, U.P. India. I'm currently pursuing B.Tech in
         Electronics & Communication Engineering, with a knack for software
@@ -23,37 +24,14 @@ import ContentMedia from "../components/ContentMedia.astro";
   <section class="my-64">
     <div class="container">
       <h2 class="mb-16 text-6xl">My Technology Stack</h2>
-      <div class="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3 features-list">
-        <Feature icon="flutter" title="Flutter" stars="4">
-          Flutter is Google’s UI toolkit for building beautiful, natively
-          compiled applications for mobile, web, and desktop from a single
-          codebase.
-        </Feature>
-        <Feature icon="laravel" title="Laravel" stars="4">
-          Laravel is a web application framework with expressive, elegant
-          syntax. With already laid down foundation — freeing you to create
-          without sweating the small things.
-        </Feature>
-        <Feature icon="node" title="NodeJS" stars="3">
-          Node.js is an open-source, cross-platform, back-end JavaScript runtime
-          environment that runs on the V8 engine and executes JavaScript code
-          outside a web browser.
-        </Feature>
-        <Feature icon="typescript" title="TypeScript" stars="4">
-          TypeScript is an open-source programming language developed and
-          maintained by Microsoft. It is a strict syntactical superset of
-          JavaScript, and adds optional static typing to the language.
-        </Feature>
-        <Feature icon="mysql" title="MySQL" stars="3">
-          MySQL is an open-source relational database management system (RDBMS).
-          Its name is a combination of "My", the name of co-founder Michael
-          Widenius's daughter, and "SQL".
-        </Feature>
-        <Feature icon="figma" title="Figma" stars="5">
-          Figma is a vector graphics editor and prototyping tool which is
-          primarily web-based, with additional offline features enabled by
-          desktop applications for macOS and Windows.
-        </Feature>
+      <div
+        class="features-list grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
+        <Feature icon="flutter" title="Flutter" stars="4" />
+        <Feature icon="laravel" title="Laravel" stars="4" />
+        <Feature icon="node" title="NodeJS" stars="3" />
+        <Feature icon="typescript" title="TypeScript" stars="4" />
+        <Feature icon="mysql" title="MySQL" stars="3" />
+        <Feature icon="figma" title="Figma" stars="5" />
       </div>
     </div>
   </section>
@@ -85,9 +63,9 @@ import ContentMedia from "../components/ContentMedia.astro";
 </DefaultLayout>
 
 <style lang="scss">
-    @for $i from 1 through 6 {
-      .features-list:nth-child(#{$i}) {
-        transition-delay: 1s * $i;
-      }
+  @for $i from 1 through 6 {
+    .features-list:nth-child(#{$i}) {
+      transition-delay: 1s * $i;
     }
+  }
 </style>
