@@ -6,6 +6,7 @@ const project = defineCollection({
     description: z.string(),
     status: z.string().optional(),
     heroImg: z.string().optional(),
+    techStack: z.array(z.array(z.string())),
     pubDate: z
       .string()
       .or(z.date())
