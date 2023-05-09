@@ -9,10 +9,17 @@ const posts = (await getCollection("project")).sort(
 ---
 
 <DefaultLayout title="My Projects">
-  <section class="my-96">
+  <section class="my-64">
     <div class="space-content container">
       <h1 class="text-8xl">My Projects</h1>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam sed voluptas quis fuga, quod libero illum debitis repudiandae atque dolorem assumenda asperiores neque at adipisci! Voluptatibus, aspernatur quibusdam labore nemo deserunt hic, aliquam a aliquid accusantium eligendi vero! Corrupti quod soluta, tempore pariatur deserunt porro repudiandae velit tenetur nam molestias.</p>
+      <p>
+        Projects are a great way to work on and showcase my skills and profiency
+        at the sime time.
+      </p>
+      <p>
+        Below given are a few of my projects that I'm super proud of. Click on
+        the title to know more about each project.
+      </p>
     </div>
   </section>
   <section>
@@ -20,7 +27,9 @@ const posts = (await getCollection("project")).sort(
       posts.map((post) => (
         <ContentMedia imgSrc="/wcag-compliant.webp" reverseImg={true}>
           <h1>
-            <a href={`/projects/${post.slug}/`}>{post.data.title}</a>
+            <a href={`/projects/${post.slug}/`} class="no-decor-link">
+              {post.data.title}
+            </a>
           </h1>
           <p class="text-2xl">{post.data.description}</p>
         </ContentMedia>
