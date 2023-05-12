@@ -17,6 +17,3 @@ techStack:
     ["Sass", "4"],
   ]
 ---
-
-# lorem
-lorem
