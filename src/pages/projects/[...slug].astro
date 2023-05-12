@@ -1,6 +1,7 @@
 ---
 import { CollectionEntry, getCollection } from "astro:content";
 import DefaultLayout from "../../layouts/DefaultLayout.astro";
+import Feature from "../../components/Feature.astro";
 
 export async function getStaticPaths() {
   const posts = await getCollection("project");
@@ -16,6 +17,29 @@ const { Content } = await post.render();
 ---
 
 <DefaultLayout>
-  <h1>{post.data.title}</h1>
-  <Content />
+  <section class="container">
+    <h1 class="my-64 text-7xl">{post.data.title}</h1>
+  </section>
+  <section class=" my-52">
+    <div class="container">
+      <h2 class="mb-16 text-6xl">Project Tech Stack</h2>
+      <div
+        class="features-list grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
+        {
+          post.data.techStack.map((technology) => (
+            <Feature
+              icon={technology[0].toLowerCase()}
+              title={technology[0]}
+              stars={technology[1]}
+            />
+          ))
+        }
+      </div>
+    </div>
+  </section>
+  <section class="my-64">
+    <div class="container">
+      <Content />
+    </div>
+  </section>
 </DefaultLayout>
