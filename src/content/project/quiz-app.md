@@ -7,4 +7,7 @@ description: "Want to test how much you know about tech? Lorem ipsum dolor sit a
 status: "Under Progress"
 pubDate: "Apr 5 2023"
 heroImg: "/social-preview-image.png"
+techStack : [
+      
+]
 ---
